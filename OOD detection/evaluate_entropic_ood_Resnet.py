@@ -339,7 +339,7 @@ def detect(inloader, oodloader):
             auroctnt.add(score, targets)            
     return auroc.compute(), auroctnt.value()[0]
 
-'''
+
 total_epochs= 1
 for epoch in range(total_epochs):
     print()
@@ -348,7 +348,7 @@ for epoch in range(total_epochs):
     train(epoch)
     val(epoch)
 
-'''
+
 checkpoint = torch.load('checkpoint/ckpt.pth')
 model.load_state_dict(checkpoint['model'])
 #test_acc = checkpoint['acc']
